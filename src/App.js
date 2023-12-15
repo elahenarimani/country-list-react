@@ -24,7 +24,7 @@ function App() {
                      </div>
                  </header>
                  <main className='w-full h-full  mt-[25px] lg:mt-[10px] p-[10px]'>
-                     <div className='country-wrapper w-full h-full p-[10px] xl:max-w-[1280px] bg-[#AFCDDD]  grid justify-between items-center grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-[5px] xl:gap-y-[25px] xl:gap-x-[10px] rounded-[5px]'>
+                     <div className='country-wrapper w-full h-full p-[10px] xl:max-w-[1280px] bg-[#AFCDDD]  grid justify-between items-center grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-[50px] gap-x-[5px] xl:gap-y-[25px] xl:gap-x-[10px] rounded-[5px]'>
                           {countryList.filter(item => item?.name?.official.toLowerCase().includes(search)).map(item => (
                                         <CountryCart key={item.cca2} flag={item.flags.png} name={item?.name?.official} capital={item?.capital} languages={item?.languages?.eng} /> 
                                          
