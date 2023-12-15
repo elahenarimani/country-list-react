@@ -1,7 +1,7 @@
 import './countryCart.css'
 function CountryCart({flag,name,capital,languages}){
     return(
-        <div className="contry-wrapper w-full h-full max-w-[500px] md:w-[300px]  h-[150px] grid justify-between items-center grid-cols-2 gap-y-[20px] gap-x-[8px]">
+        <div className="contry-wrapper w-full h-full max-w-[500px] md:w-[300px]  h-[150px] grid justify-between content-start grid-cols-2 gap-y-[20px] gap-x-[8px]">
              <div className="w-[70px] h-auto ">
                 <img className="w-full h-full " src={flag} alt='flag'/>
              </div>

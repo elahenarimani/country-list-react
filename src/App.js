@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
             <div className=' w-full h-full flex flex-col justify-between  '>
-                 <header className='search-wrapper  max-w-[500px] max-w-[500px] md:w-full h-[183px] xl:max-w-[1280px]  flex flex-col justify between items-center pt-[10px] pb-[10px] lg:block lg:relative lg:z-0'>
+                 <header className='search-wrapper  max-w-[500px] max-w-[500px] md:w-full h-[183px] xl:max-w-[1280px]  flex flex-col justify-between items-center pt-[10px] pb-[10px] lg:block lg:relative lg:z-0'>
                      <div className='w-[350px] md:max-w-[500px]  h-auto  pt-[10px]  lg:absolute lg:left-[10px] lg:top-0 lg:z-2'>
                           <img className='w-full h-full'  src='./image/logo.webp' alt='the world'/>
                      </div>
@@ -24,7 +24,7 @@ function App() {
                      </div>
                  </header>
                  <main className='w-full h-full  mt-[25px] lg:mt-[10px] p-[10px]'>
-                     <div className='country-wrapper w-full h-full p-[10px] xl:max-w-[1280px] bg-[#AFCDDD]  grid justify-between items-center grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-[50px] gap-x-[5px] xl:gap-y-[25px] xl:gap-x-[10px] rounded-[5px]'>
+                     <div className='country-wrapper w-full h-full p-[10px] xl:max-w-[1280px] bg-[#AFCDDD]  grid justify-between content-center grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-[50px] gap-x-[5px] xl:gap-y-[25px] xl:gap-x-[10px] rounded-[5px]'>
                           {countryList.filter(item => item?.name?.official.toLowerCase().includes(search)).map(item => (
                                         <CountryCart key={item.cca2} flag={item.flags.png} name={item?.name?.official} capital={item?.capital} languages={item?.languages?.eng} /> 
                                          
