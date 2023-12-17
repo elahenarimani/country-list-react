@@ -14,6 +14,7 @@ function App() {
 },[])
   return (
     <div className="App">
+      {console.log(countryList)}
             <div className=' w-full h-full flex flex-col justify-between  '>
                  <header className='search-wrapper  max-w-[500px] max-w-[500px] md:w-full h-[183px] xl:max-w-[1280px]  flex flex-col justify-between items-center pt-[10px] pb-[10px] lg:block lg:relative lg:z-0'>
                      <div className='w-[350px] md:max-w-[500px]  h-auto  pt-[10px]  lg:absolute lg:left-[10px] lg:top-0 lg:z-2'>
@@ -23,10 +24,11 @@ function App() {
                          <Input  valueState={search} onChangeHandler={(e) => setSearch(e.target.value)}/>
                      </div>
                  </header>
-                 <main className='w-full h-full  mt-[25px] lg:mt-[10px] p-[10px]'>
-                     <div className='country-wrapper w-full h-full p-[10px] xl:max-w-[1280px] bg-[#AFCDDD]  grid justify-between content-center grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-[50px] gap-x-[5px] xl:gap-y-[25px] xl:gap-x-[10px] rounded-[5px]'>
+                 <main className='w-full h-full  mt-[25px] lg:mt-[10px] pt-[10px] pb-[10px]'>
+                     <div className='country-wrapper w-full h-full pt-[10px]  pb-[10px] xl:max-w-[1280px] bg-[#AFCDDD] bg-opacity-[0.8] grid justify-between content-center grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-[50px] gap-x-[5px] xl:gap-y-[25px]  rounded-[5px]'>
                           {countryList.filter(item => item?.name?.official.toLowerCase().includes(search)).map(item => (
-                                        <CountryCart key={item.cca2} flag={item.flags.png} name={item?.name?.official} capital={item?.capital} languages={item?.languages?.eng} /> 
+                                        <CountryCart key={item?.cca2} lang={Object.values(item?.languages ?? {})[0] ?? "-"} flag={item?.flags?.png} name={item?.name?.official} capital={item?.capital}  /> 
+                                        // item?.languages?.eng           
                                          
                           ))}
                      </div>

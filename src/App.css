@@ -45,7 +45,12 @@ header{
   margin-left: auto;
   margin-right: auto;
 }
-
+main{
+  background-image: url("hp-container-one-bg.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

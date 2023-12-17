@@ -2,3 +2,10 @@
     margin-left: auto;
     margin-right: auto;
 }
+.contry-wrapper .capital{
+   
+    
+    /* word-break:break-all; */
+    overflow-wrap: break-word;
+  
+}
